@@ -4,6 +4,6 @@ app = FastAPI()
 
 @app.get("/")
 def read_main(token: str = None):
-    if token != "your_secret_token":
+    if token != "VILLAFUERTE":
         raise HTTPException(status_code=401, detail="Unauthorized")
     return {"message": "Hello, World!"}
